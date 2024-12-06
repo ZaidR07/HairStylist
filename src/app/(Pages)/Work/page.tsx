@@ -20,10 +20,9 @@ const images = [
   "/Gallery3.jpeg",
   "/Gallery6.jpeg",
   "/Gallery7.jpeg",
-  "/Gallery8.jfif",
-  "/Gallery9.jfif",
-  "/Gallery8.jfif",
-  "/Gallery9.jfif",
+  "/Gallery8.jpg",
+  "/Gallery9.jpg",
+  
 
 ];
 

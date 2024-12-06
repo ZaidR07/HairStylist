@@ -22,6 +22,8 @@ const images = [
   "/Gallery7.jpeg",
   "/Gallery8.jfif",
   "/Gallery9.jfif",
+  "/Gallery8.jfif",
+  "/Gallery9.jfif",
 
 ];
 

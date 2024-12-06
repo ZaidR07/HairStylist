@@ -31,10 +31,11 @@ export default function WorldMap({
   });
 
   const projectPoint = (lat: number, lng: number) => {
-    const x = (lng + 180) * (800 / 360);
-    const y = (90 - lat) * (400 / 180);
+    const x = (lng + 180) * (800 / 360); // Map width: 800px
+    const y = (90 - lat) * (400 / 180);  // Map height: 400px
     return { x, y };
   };
+  
 
   const createCurvedPath = (
     start: { x: number; y: number },
@@ -49,7 +50,7 @@ export default function WorldMap({
     <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg  relative font-sans">
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
+        className="h-full w-full rounded pointer-events-none select-none"
         alt="world map"
         height="495"
         width="1056"
@@ -63,6 +64,9 @@ export default function WorldMap({
         {dots.map((dot, i) => {
           const startPoint = projectPoint(dot.start.lat, dot.start.lng);
           const endPoint = projectPoint(dot.end.lat, dot.end.lng);
+
+          console.log("Rendering dot:", dot, startPoint, endPoint); // Debug
+
           return (
             <g key={`path-group-${i}`}>
               <motion.path
@@ -70,19 +74,14 @@ export default function WorldMap({
                 fill="none"
                 stroke="url(#path-gradient)"
                 strokeWidth="1"
-                initial={{
-                  pathLength: 0,
-                }}
-                animate={{
-                  pathLength: 1,
-                }}
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
                 transition={{
                   duration: 1,
                   delay: 0.5 * i,
                   ease: "easeOut",
                 }}
-                key={`start-upper-${i}`}
-              ></motion.path>
+              />
             </g>
           );
         })}

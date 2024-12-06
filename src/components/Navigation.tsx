@@ -37,22 +37,26 @@ const Navigation = () => {
           <ul className="flex items-center justify-around h-full">
             <Link
             href="/"
-            className="cursor-pointer ">
+            className="cursor-pointer"
+            onClick={() => setHamOpen(false)}>
               Home
             </Link>
             <Link
             href="/About"
-            className="cursor-pointer ">
+            className="cursor-pointer"
+            onClick={() => setHamOpen(false)}>
               About
             </Link>
             <Link
-            href="/About"
-            className="cursor-pointer ">
+            href="/Prices"
+            className="cursor-pointer"
+            onClick={() => setHamOpen(false)}>
               Prices
             </Link>
             <Link
             href="/Contact"
-            className="cursor-pointer ">
+            className="cursor-pointer"
+            onClick={() => setHamOpen(false)}>
               Contact
             </Link>
           </ul>

@@ -15,7 +15,20 @@ export default function Hero() {
         <span className=" text-3xl sm:text-7xl font-serif relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 ">
           Professional HairStylist
         </span>
-        <button className="w-24 h-8 mt-4 bg-yellow-800 rounded">Hire Me</button>
+        <button
+  className="w-24 h-8 mt-4 bg-yellow-800 text-white rounded"
+  onClick={() =>
+    window.open(
+      "https://wa.me/917903670661?text=Hello, I found your contact on the website and would like to hire you. Please get back to me to discuss further details.",
+      "_blank",
+      "noopener,noreferrer"
+    )
+  }
+  
+>
+  Hire Me
+</button>
+
       </div>
       {/* <TextGenerateEffect words={words} /> */}
       <Image

@@ -10,7 +10,7 @@ const Navigation = () => {
   return (
     <>
       {/* Navigation Bar */}
-      <nav className="bg-transparent fixed right-0 top-5 z-[9998] w-full">
+      <nav className="bg-transparent fixed right-0 top-5 z-[9998] w-full md:hidden lg:hidden 2xl:hidden">
         {!hamopen ? (
           <HamIcon
             onClick={() => setHamOpen(true)}

@@ -42,7 +42,7 @@ const page = () => {
       </h1>
 
       <Image
-        src="/Workimage.jpg" // Path to the image in the public folder
+        src="/workimage.jpg" // Path to the image in the public folder
         alt="Professional Hair Stylist"
         width={400} // Provide a width for optimization
         height={400} // Provide a height for optimization

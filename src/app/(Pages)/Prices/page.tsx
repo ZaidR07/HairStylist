@@ -1,11 +1,66 @@
-import React from 'react'
+import React from "react";
+
+
+const work = [
+  {
+    name : "Bridal",
+    charge : 2500,
+    sno : 1
+  },
+  {
+    name : "Sidal",
+    charge : 1500,
+    sno : 2
+
+  },
+  {
+    name : "Television Company",
+    charge : 70000,
+    sno : 3
+
+  },
+  {
+    name : "One day Shooting",
+    charge : 1200,
+    sno : 4
+  },
+  {
+    name : "Web Series Shooting",
+    charge : 1500,
+    sno : 5
+  },
+  {
+    name : "Outdoor",
+    charge : 2000,
+    sno : 5
+  }
+
+]
 
 const page = () => {
   return (
-    <div className="px-[5%] py-24 w-full min-h-screen dark:bg-black bg-white dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] grid place-items-center">
-        <p className='text-4xl text-yellow-700'>Comming Soon</p>
-    </div>
-  )
-}
+    <div className="px-[5%] py-12 w-full min-h-screen dark:bg-black bg-white dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] flex flex-col">
+      <h1 className="text-center , text-yellow-600 , text-2xl">Service & Charges</h1>
+      <img src="/Workimage.jpg" className="rounded-xl , mt-4" />
+      
 
-export default page
+      <table className="w-full mt-8">
+        <tr className="w-full">
+          <th className="border-2 , border-yellow-700 , p-1">S.no</th>
+          <th className="border-2 , border-yellow-700 , p-1">Service Name</th>
+          <th className="border-2 , border-yellow-700 , p-1">Charge</th>
+        </tr>
+        {work && work.map((item) => (
+          <tr className="text-center" key={item.sno}>
+            <td>{item.sno}</td>
+            <td>{item.name}</td>
+            <td>{item.charge}</td>
+
+          </tr>
+        ))}
+      </table>
+    </div>
+  );
+};
+
+export default page;

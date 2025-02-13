@@ -15,7 +15,7 @@ const Navigation = () => {
           <HamIcon
             onClick={() => setHamOpen(true)}
             className="ml-auto mr-2 my-auto align-baseline"
-            fill="#fff"
+            fill="#a16207"
             width={35}
             height={35}
           />
@@ -23,7 +23,7 @@ const Navigation = () => {
           <CloseIcon
             onClick={() => setHamOpen(false)}
             className="ml-auto mr-2 my-auto align-baseline"
-            fill="#fff"
+            fill="#a16207"
             width={35}
             height={35}
           />
